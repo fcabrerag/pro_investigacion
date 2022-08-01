@@ -1,5 +1,7 @@
 # pro_investigacion
 
+
+
 ## 1.- Análisis exploratorio de datos:
 ### 1.1.- Gráficos distancia acumulada /tiempo de buses de un servicio de bus:
 Permiten observar la distancia recorrida por un bus(de un servicio de bus específico) a lo largo del tiempo(hr). Además, es posible realizar zoom en intervalos de distancia y tiempo específicos, buscando patrones para viajes de buses. Mi trabajo de investigación de tesis de magíster trata el problema de bunching bus, por lo que se desea encontrar características comunes para los viajes de buses que se encuentren viajando cercanamente o viajes de buses(representados por una línea) que se intersecten entre ellos , lo que inmediatamente indicaría presencia del fenómeno. En la imagen se visualizan los viajes de buses(resprestenados cada uno por una serie) en el intervalo comprendido entre las 09:30 horas y las 13:30 horas para los cuatro lunes del mes de Agosto de 2018.
@@ -22,13 +24,18 @@ scatterplot. El eje X de coordenadas representa la longitud y el eje Y de coorde
 
 
 ### 2.2.- Interpolación lineal de datos faltantes:
-El muestreo de datos GPS no ha sido caputado con la misma regularidad para todos los viajes de bus, encontrando tiempos con valores superiores a 30 segundos (que es el tiempo de muestreo definido entre cada registro de GPS).Es aplicado un algoritmo encargado de generar nuevos registros de fechas de muestreo GPS con la regularidad correcta. Las variables de latitud y longitud nuevas son completadas a través de la interpolación lineal, que calcula los valores intermedios entre dos puntos con un pequeño error. La figura realiza una comparativa antes y posterior a la regularización del viaje. Los datos corresponden a un día deJulio de 2018 para un viaje de bus (entre las 12:10 y 12:14 horas).
+El muestreo de datos GPS no ha sido capturado con la misma regularidad para todos los viajes de bus, encontrando tiempos con valores superiores a 30 segundos (que es el tiempo de muestreo definido entre cada registro de GPS).Es aplicado un algoritmo encargado de generar nuevos registros de fechas de muestreo GPS con la regularidad correcta. Las variables de latitud y longitud nuevas son completadas a través de la interpolación lineal, que calcula los valores intermedios entre dos puntos con un pequeño error. La figura realiza una comparativa antes y posterior a la regularización del viaje. Los datos corresponden a un día deJulio de 2018 para un viaje de bus (entre las 12:10 y 12:14 horas).
 
 ![](https://github.com/fcabrerag/pro_investigacion/blob/main/imagenes/fig_3.2.png)
 
 El lenguaje de programación utilizado es Python. Para el tratamiento de datos es usada la librería pandas y en la visualización de resultados la librería Matplotlib.
 
+## 3.- Visualización de resultados de una red neuronal LSTM:
+Posterior a la construcción de una red neuronal LSTM (de arquitectura Many-to-One),a través de loops se generan predicciones de los viajes de un bus, en un intervalo de una hora, para los días que corresponden para el conjunto de test del dataset. Estas predicciones se guardan en archivos de textos , los cuales son leídos a través de un script en Python que se encarga de cargar estos datos y generar las imagenes las cuales son guardadas en un directorio especifico(es un proceso masivo). En la figura se muestran las predicciones para un día puntual en un intervalo de una hora, comparando las predicciones de la red (imagen izquierda) contra los datos reales(imagen derecha).
 
+![](https://github.com/fcabrerag/pro_investigacion/blob/main/imagenes/resultados_red_mo.png)
+
+El lenguaje de programación utilizado es Python. Para el tratamiento de datos es usada la librería pandas y en la visualización de resultados la librería Matplotlib.
 
 
 
