@@ -1,6 +1,14 @@
 # pro_investigacion
 
+Como opinión personal, considero que una imagen vale más que mil palabras. Esto también se puede apreciar en los proyectos de Machine Learning y en todo el apoyo que las visualizaciones nos pueden aportar al momento de tomar decisiones. A través de este cuaderno, deseo mostrar de manera general y entendible mi trabajo en esta área. 
 
+Mi trabajo de tesis trata sobre un tema partícular del ámbito de transporte público llamado bus bunching. 
+
+El “bus bunching” (agrupamiento de buses) es el principal problema para la regularidad de los buses urbanos. El agrupamiento de buses se define como el intervalo de tiempo en que un bus transita al menos junto a otro bus del mismo servicio, separados por un headway menor a una cierta fracción del headway programado. El headway es la diferencia de tiempo que existe entre dos buses que recorren la misma ruta al llegar al mismo punto del recorrido, entendiéndose también como un desfase de sus tiempos de viaje.
+
+Para ello , solicité al ministerio de transporte de mi país un dataset de registros GPS de un servicio de bus específico , que consta de registros de buses GPS de cada bus muestreado cada 30 segundos.
+
+A continuación, les presento las gráficas construídas como apoyo para este proyecto de investigación:
 
 ## 1.- Análisis exploratorio de datos:
 ### 1.1.- Gráficos distancia acumulada /tiempo de buses de un servicio de bus:
