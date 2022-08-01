@@ -14,8 +14,13 @@ Contabilización de casos para dos períodos de tiempo determinados (meses de Ju
 
 El lenguaje de programación utilizado es Python. Para el tratamiento de datos es usada la librería pandas y en la visualización de resultados la librería Seaborn.
 
-## 2.- Limpieza y tratamiendo de datos faltantes:
+## 2.- Limpieza y tratamiento de datos faltantes:
 ### 2.1.- Limpieza de datos:
+Se busca visualizar todos los viajes de los buses usando las variables de longitud y latitud. La finalidad es encontrar los límites a nivel de coordenadas, localizando posibles viajes de buses que circularon por lugares distintos a su ruta. El gráfico escogido para este propósito es un
+scatterplot. El eje X de coordenadas representa la longitud y el eje Y de coordenadas representa la latitud. Son detectados viajes de buses que describen rutas que se escapan del rango de valores aceptados como válidos y que deben ser eliminados con la finalidad de homogeneizar los viajes del servicio de bus.En la figura se muestra la aplicación de un filtro de eliminación de registros de viajes para un grupo de buses que su ruta que sobrepasa su límite de longitud (valores superiores a -70.64)
+![](https://github.com/fcabrerag/pro_investigacion/blob/main/imagenes/filtro_datos.png)
+
+
 ### 2.2.- Interpolación lineal de datos faltantes:
 El muestreo de datos GPS no ha sido caputado con la misma regularidad para todos los viajes de bus, encontrando tiempos con valores superiores a 30 segundos (que es el tiempo de muestreo definido entre cada registro de GPS).Es aplicado un algoritmo encargado de generar nuevos registros de fechas de muestreo GPS con la regularidad correcta. Las variables de latitud y longitud nuevas son completadas a través de la interpolación lineal, que calcula los valores intermedios entre dos puntos con un pequeño error. La figura realiza una comparativa antes y posterior a la regularización del viaje. Los datos corresponden a un día deJulio de 2018 para un viaje de bus (entre las 12:10 y 12:14 horas).
 
